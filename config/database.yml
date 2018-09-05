@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: 127.0.0.1
+  pool: 5
+
+development:
+  <<: *default
+  database: likemachine_development
+  username: <%= ENV["PG_USER"] || "postgres" %>
+
+test:
+  <<: *default
+  database: likemachine_test
+  username: <%= ENV["PG_USER"] || "postgres" %>
