@@ -10,6 +10,6 @@ class LinkSerializer < ApplicationSerializer
   end
 
   def owned
-    object.author_id == scope.id
+    object.author_id == scope&.id
   end
 end
