@@ -15,6 +15,7 @@ gem "httparty"
 
 # Services
 gem "newrelic_rpm"
+gem "airbrake"
 
 group :development, :test do
   gem "pry-byebug"
